@@ -31,6 +31,9 @@ def main():
         elif result == "computer":
             score_computer = score_computer + 1
             print("the computer won, better luck next time!!")
+        elif result == "draw":
+            print("it was a draw!!")
+
         retry = input("want another go?  ")
 
 
@@ -39,7 +42,7 @@ def main():
 
 def logic(user_decision, program_decision):
     if user_decision == program_decision:
-        print("it was a draw")
+        return "draw"
     elif user_decision == "rock" and program_decision == "paper":
         return "computer"
     elif user_decision == "paper" and program_decision == "scissors":
