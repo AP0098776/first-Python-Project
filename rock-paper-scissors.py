@@ -27,9 +27,13 @@ def main():
 
         if result == "user":
             score_user = score_user + 1
+            print("you won!!")
         elif result == "computer":
             score_computer = score_computer + 1
+            print("the computer won, better luck next time!!")
         retry = input("want another go?  ")
+
+
 
 
 
