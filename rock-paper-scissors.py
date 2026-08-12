@@ -42,7 +42,7 @@ def main():
             user_decision = input("Choose rock, paper or scissors: ").lower()
             if user_decision not in choices:
                 print("invalid option!!")
-                return
+                continue
 
 
             program_decision = random.choice(choices)
