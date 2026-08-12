@@ -3,14 +3,15 @@ import random
 
 choices = ["rock", "paper", "scissors"]
 menu_choices = ["1", "2", "3"]
+retry_choices = ["yes", "no"]
+
 
 
 
 
 def main():
     retry = "yes"
-    score_user = 0
-    score_computer = 0
+
 
 
 
@@ -30,10 +31,17 @@ def main():
 
         if menu_option == "3":
             break
+        elif menu_option == "1":
+            score_user = 0
+            score_computer = 0
+            retry = "yes"
         elif menu_option == "2":
             print(f"User score:, {score_user}")
             print(f"computer score:, {score_computer}")
             continue
+
+
+
 
 
 
@@ -64,6 +72,14 @@ def main():
                 print("it was a draw!!")
 
             retry = input("want another go?  ")
+
+
+            while retry not in retry_choices:
+                retry = input("want another go?  ")
+
+                if retry not in retry_choices:
+                    print("not a valid option!! ")
+
 
 
 
