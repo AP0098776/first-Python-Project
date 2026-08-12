@@ -2,6 +2,7 @@ import random
 
 
 choices = ["rock", "paper", "scissors"]
+menu_choices = ["1", "2", "3"]
 
 
 
@@ -22,6 +23,10 @@ def main():
         print("2. Show score (2)")
         print("3. Quit Game (3)")
         menu_option = input("choose an option: ")
+
+        if menu_option not in menu_choices:
+            print("please choose a valid option (1, 2, 3)")
+            continue
 
         if menu_option == "3":
             break
