@@ -5,10 +5,18 @@ choices = ["rock", "paper", "scissors"]
 
 
 
+
 def main():
+    retry = "yes"
+    score_user = 0
+    score_computer = 0
+
 
 
     while True:
+
+
+
         print("Rock Paper Scissors Game")
         print("1. Play Game (1) ")
         print("2. Show score (2)")
@@ -17,12 +25,15 @@ def main():
 
         if menu_option == "3":
             break
+        elif menu_option == "2":
+            print(f"User score:, {score_user}")
+            print(f"computer score:, {score_computer}")
+            continue
 
 
 
-        retry = "yes"
-        score_user = 0
-        score_computer = 0
+
+
 
         while retry == "yes":
 
